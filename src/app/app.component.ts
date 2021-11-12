@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SimpleAngularComponentExamples';
+
+  public dataFromChild: string | undefined;
+  public dataTwoWayBinding: string = 'init value for two-way-binding';
+
+  onEventFromComponent(event: string) { //event = data emitted by component
+    this.dataFromChild = event;
+  }
 }
